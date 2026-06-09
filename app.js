@@ -55,10 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
         searchInput.value = "";
       }
 
-      // Render the tab if not yet rendered
-      if (tab === "tp2" && galleryGridTp2 && !galleryGridTp2.hasChildNodes()) {
+      // Render the tab if not yet rendered (check element children, not text nodes)
+      if (tab === "tp2" && galleryGridTp2 && galleryGridTp2.children.length === 0) {
         renderTP2Gallery(TP2_DATA);
-      } else if (tab === "tp3" && galleryGridTp3 && !galleryGridTp3.hasChildNodes()) {
+      } else if (tab === "tp3" && galleryGridTp3 && galleryGridTp3.children.length === 0) {
         renderTP3Gallery(TP3_DATA);
       }
     });
