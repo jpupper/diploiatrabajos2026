@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diplomatura de inteligencia artificial , modulo codigo clase1 - Galería de Trabajos</title>
+  <title>Diplomatura de inteligencia artificial , modulo codigo - Galería de Trabajos</title>
   
   <!-- SEO Meta Tags -->
-  <meta name="description" content="Galería de entregas y sketches creativos de p5.js de los alumnos de la Diplomatura de Inteligencia Artificial (Módulo Código, Clase 1) de la UNA Multimediales.">
+  <meta name="description" content="Galería de entregas y sketches creativos de los alumnos de la Diplomatura de Inteligencia Artificial (Módulo Código) de la UNA Multimediales.">
   <meta name="keywords" content="p5.js, creative coding, artificial intelligence, UNA Multimediales, diplomatura ia, generative art">
   <meta name="author" content="UNA Multimediales">
   
@@ -26,35 +26,67 @@
     <!-- Header -->
     <header>
       <span class="title-tag">UNA IA Multimediales</span>
-      <h1 id="main-title">Diplomatura de inteligencia artificial , modulo codigo clase1</h1>
-      <div class="gallery-section-tag" id="gallery-label">Primera Entrega</div>
+      <h1 id="main-title">Diplomatura de inteligencia artificial , modulo codigo</h1>
       
       <!-- Navigation Bar -->
       <nav class="nav-bar" aria-label="Navegación principal">
         <a href="index.html" class="nav-link active" id="nav-home">Inicio</a>
-        <a href="koch.html" class="nav-link" id="nav-koch">Fractal Koch</a>
-        <a href="apollonian.html" class="nav-link" id="nav-apollonian">Apollonian Gasket</a>
-        <a href="flowfield.html" class="nav-link" id="nav-flowfield">Flow Field</a>
         <a href="contacto.html" class="nav-link" id="nav-contact">Contacto</a>
       </nav>
+
+      <!-- Tab Navigation for entregas -->
+      <div class="tab-bar" role="tablist" aria-label="Entregas">
+        <button class="tab-btn active" role="tab" aria-selected="true" data-tab="tp1" id="tab-tp1">
+          <span class="tab-num">01</span>
+          <span class="tab-label">Primera Entrega</span>
+          <span class="tab-count">21 sketches</span>
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="tp2" id="tab-tp2">
+          <span class="tab-num">02</span>
+          <span class="tab-label">Segunda Entrega</span>
+          <span class="tab-count">29 proyectos</span>
+        </button>
+        <button class="tab-btn" role="tab" aria-selected="false" data-tab="tp3" id="tab-tp3">
+          <span class="tab-num">03</span>
+          <span class="tab-label">Tercera Entrega</span>
+          <span class="tab-count">8 apps</span>
+        </button>
+      </div>
     </header>
 
-    <!-- Search Section -->
-    <section class="search-wrapper" aria-label="Búsqueda de entregas">
-      <div class="search-input-container">
-        <span class="search-icon" aria-hidden="true">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="11" cy="11" r="8"></circle>
-            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-          </svg>
-        </span>
-        <input type="text" id="search-input" placeholder="Buscar por creador o título..." aria-label="Buscar sketches por creador o título">
+    <!-- TP1: p5.js Sketches -->
+    <section id="section-tp1" class="tab-section active" aria-label="Primera entrega - p5.js sketches">
+      <!-- Search Section -->
+      <div class="search-wrapper" aria-label="Búsqueda de entregas">
+        <div class="search-input-container">
+          <span class="search-icon" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input type="text" id="search-input" placeholder="Buscar por creador o título..." aria-label="Buscar sketches por creador o título">
+        </div>
       </div>
+
+      <!-- Cards Grid -->
+      <section id="gallery-grid" class="gallery-grid" aria-label="Grilla de sketches de p5.js">
+        <!-- Cards will be dynamically injected here by app.js -->
+      </section>
     </section>
 
-    <!-- Cards Grid -->
-    <section id="gallery-grid" class="gallery-grid" aria-label="Grilla de sketches de p5.js">
-      <!-- Cards will be dynamically injected here by app.js -->
+    <!-- TP2: GitHub Pages projects -->
+    <section id="section-tp2" class="tab-section" aria-label="Segunda entrega - GitHub Pages">
+      <section id="gallery-grid-tp2" class="gallery-grid" aria-label="Grilla de proyectos en GitHub Pages">
+        <!-- Cards will be dynamically injected here by app.js -->
+      </section>
+    </section>
+
+    <!-- TP3: Render deployed projects -->
+    <section id="section-tp3" class="tab-section" aria-label="Tercera entrega - Render">
+      <section id="gallery-grid-tp3" class="gallery-grid" aria-label="Grilla de proyectos en Render">
+        <!-- Cards will be dynamically injected here by app.js -->
+      </section>
     </section>
 
   </main>
