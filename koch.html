@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diplomatura de inteligencia artificial , modulo codigo clase1 - Fractal de Koch Interactivo</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Visualización interactiva del Copo de Nieve de Koch en p5.js. Modifica la profundidad del fractal y el ángulo en tiempo real moviendo tu cursor.">
+  <meta name="keywords" content="fractal de koch, p5.js, copo de nieve, matemáticas, código creativo, interactivo, computación gráfica">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+  
+  <!-- p5.js Library from CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+</head>
+<body>
+
+  <!-- Main Container -->
+  <main class="container">
+    
+    <!-- Header -->
+    <header>
+      <span class="title-tag">UNA Multimediales</span>
+      <h1 id="main-title">Diplomatura de inteligencia artificial , modulo codigo clase1</h1>
+      <div class="gallery-section-tag" id="gallery-label">Simulación de Sistemas Dinámicos</div>
+      
+      <!-- Navigation Bar -->
+      <nav class="nav-bar" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link" id="nav-home">Inicio</a>
+        <a href="koch.html" class="nav-link active" id="nav-koch">Fractal Koch</a>
+        <a href="apollonian.html" class="nav-link" id="nav-apollonian">Apollonian Gasket</a>
+        <a href="flowfield.html" class="nav-link" id="nav-flowfield">Flow Field</a>
+        <a href="contacto.html" class="nav-link" id="nav-contact">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Interactive Canvas Viewport -->
+    <section class="koch-viewport" aria-label="Lienzo del fractal interactivo">
+      <div id="canvas-container"></div>
+    </section>
+
+    <!-- Info & Dashboard Panel -->
+    <section class="info-section" style="margin-top: 2rem;" aria-labelledby="dashboard-heading">
+      <h2 id="dashboard-heading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        Panel de Control & Estadísticas
+      </h2>
+      <p>Mueve tu cursor dentro del lienzo superior para interactuar directamente con la geometría generativa del Copo de Nieve:</p>
+      
+      <div class="student-list-container" style="margin: 1.5rem 0;">
+        <span class="student-tag">Eje X (Horizontal): Profundidad de Recursión: <strong id="stat-level" style="color: var(--accent-red);">0</strong></span>
+        <span class="student-tag">Eje Y (Vertical): Ángulo del Pliegue: <strong id="stat-angle" style="color: var(--accent-purple);">0°</strong></span>
+      </div>
+      
+      <p><strong>Cómo funciona:</strong> Al desplazar el cursor de izquierda a derecha, se incrementa la profundidad de recursión dividiendo cada segmento según el algoritmo de Koch. Mover el cursor de arriba a abajo modifica dinámicamente el ángulo del pico central del generador, transformando el triángulo euclidiano estándar de $60^\circ$ en una estructura orgánica que respira y se pliega matemáticamente.</p>
+    </section>
+
+  </main>
+
+  <!-- p5.js Sketch script -->
+  <script src="koch_sketch.js"></script>
+</body>
+</html>

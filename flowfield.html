@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diplomatura de inteligencia artificial , modulo codigo clase1 - Flow Field Interactivo</title>
+  
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Visualización interactiva de un Flow Field con partículas que responden al movimiento del mouse. Experimenta con campos de flujo generativos en tiempo real.">
+  <meta name="keywords" content="flow field, campo de flujo, partículas, p5.js, creative coding, generative art, interactive visualization">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Orbitron:wght@500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Container -->
+  <main class="container">
+    
+    <!-- Header -->
+    <header>
+      <span class="title-tag">UNA Multimediales</span>
+      <h1 id="main-title">Diplomatura de inteligencia artificial , modulo codigo clase1</h1>
+      <div class="gallery-section-tag" id="gallery-label">Campo de Flujo Interactivo</div>
+      
+      <!-- Navigation Bar -->
+      <nav class="nav-bar" aria-label="Navegación principal">
+        <a href="index.html" class="nav-link" id="nav-home">Inicio</a>
+        <a href="koch.html" class="nav-link" id="nav-koch">Fractal Koch</a>
+        <a href="apollonian.html" class="nav-link" id="nav-apollonian">Apollonian Gasket</a>
+        <a href="flowfield.html" class="nav-link active" id="nav-flowfield">Flow Field</a>
+        <a href="contacto.html" class="nav-link" id="nav-contact">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- Interactive Canvas Viewport -->
+    <section class="koch-viewport" aria-label="Lienzo del campo de flujo interactivo">
+      <div id="canvas-container"></div>
+    </section>
+
+    <!-- Info & Dashboard Panel -->
+    <section class="info-section" style="margin-top: 2rem;" aria-labelledby="dashboard-heading">
+      <h2 id="dashboard-heading">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+        Panel de Control & Estadísticas
+      </h2>
+      <p>Mueve tu cursor sobre la pantalla para interactuar con el campo de flujo. Las partículas responden al movimiento de tu mouse creando patrones dinámicos.</p>
+      
+      <div class="student-list-container" style="margin: 1.5rem 0;">
+        <span class="student-tag">Partículas: <strong id="stat-particles" style="color: var(--accent-cyan);">800</strong></span>
+        <span class="student-tag">Colores: <strong id="stat-colors" style="color: var(--accent-purple);">3</strong></span>
+        <span class="student-tag">Interacción: <strong id="stat-interaction" style="color: var(--accent-red);">Mouse</strong></span>
+      </div>
+      
+      <p><strong>Cómo funciona:</strong> El Flow Field genera un campo vectorial basado en funciones de ruido senoidal multi-capa. Cada partícula sigue las líneas de flujo calculadas en tiempo real. Al mover el mouse, se genera una fuerza de repulsión que empuja las partículas creando patrones orgánicos y dinámicos. La velocidad del mouse también influye en la intensidad de la interacción.</p>
+    </section>
+
+  </main>
+
+  <!-- Flow Field Script -->
+  <script src="flowfield.js"></script>
+</body>
+</html>
